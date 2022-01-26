@@ -1,0 +1,52 @@
+package ru.egorycheva.springapp1.models;
+
+public class AcademicGroup {
+    private int id;
+    private String name;
+    private String faculty;
+    private int dateStart;
+    private int qtYear;
+
+    public AcademicGroup() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getFaculty() {
+        return faculty;
+    }
+
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
+    }
+
+    public int getDateStart() {
+        return dateStart;
+    }
+
+    public void setDateStart(int dateStart) {
+        this.dateStart = dateStart;
+    }
+
+    public int getQtYear() {
+        return qtYear;
+    }
+
+    public void setQtYear(int qtYear) {
+        this.qtYear = qtYear;
+    }
+}

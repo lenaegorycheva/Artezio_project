@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование информации о группе</title>
+    <style>
+        form{
+            width: 500px;
+            margin: auto;
+            padding-top: 30px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body>
+<form th:method="PATCH" th:action="@{/groups/{id}(id=${group.getId()})}" th:object="${group}">
+    <h3>Изменить информацию о группе</h3>
+    <div class="row">
+        <small class="text-muted">Название группы</small><br>
+        <div class="col">
+            <input type="text" class="form-control" th:field="*{name}" id="name"/>
+            <div class="form-text" style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">error</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <small class="text-muted">Факультет</small><br>
+        <div class="col">
+            <input type="text" class="form-control" th:field="*{faculty}" id="faculty"/>
+            <div class="form-text" style="color:red" th:if="${#fields.hasErrors('faculty')}" th:errors="*{faculty}">error</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <small class="text-muted">Начало обучения</small><br>
+        <div class="col">
+            <input type="number" class="form-control" th:field="*{dateStart}" id="dateStart"/>
+            <div class="form-text" style="color:red" th:if="${#fields.hasErrors('dateStart')}" th:errors="*{dateStart}">error</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <small class="text-muted">Количество лет</small><br>
+        <div class="col">
+            <input type="number" class="form-control" th:field="*{qtYear}" id="qtYear"/>
+            <div class="form-text" style="color:red" th:if="${#fields.hasErrors('qtYear')}" th:errors="*{qtYear}">error</div>
+        </div>
+    </div><br>
+
+    <div class="row">
+        <div class="col">
+            <button type="submit" class="btn btn-outline-primary">Редактировать группу</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
