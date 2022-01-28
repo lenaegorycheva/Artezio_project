@@ -1,4 +1,4 @@
-Проект выполнен с использованием: Tomcat server v.9.0.56; MySQL; Spring Framework; Thymeleaf
+Проект выполнен с использованием: Tomcat server v.9.0.56; MySQL; Spring Framework; Thymeleaf; JDBC Template
 
 Доступные URL:
 
