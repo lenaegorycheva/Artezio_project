@@ -1,0 +1,10 @@
+ru\egorycheva\springapp1\dao\GroupMapper.class
+ru\egorycheva\springapp1\models\AcademicGroup.class
+ru\egorycheva\springapp1\controllers\StudentsController.class
+ru\egorycheva\springapp1\config\SpringConfig.class
+ru\egorycheva\springapp1\models\Student.class
+ru\egorycheva\springapp1\dao\StudentMapper.class
+ru\egorycheva\springapp1\controllers\GroupsController.class
+ru\egorycheva\springapp1\config\MySpringMvcDispatcherServletInitializer.class
+ru\egorycheva\springapp1\dao\GroupDAO.class
+ru\egorycheva\springapp1\dao\StudentDAO.class

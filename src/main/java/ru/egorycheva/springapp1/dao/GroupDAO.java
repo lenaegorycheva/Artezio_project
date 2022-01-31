@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 import ru.egorycheva.springapp1.models.AcademicGroup;
-
 import java.util.List;
 
 @Component
@@ -16,7 +15,7 @@ public class GroupDAO {
     }
 
     public List<AcademicGroup> getGroups(){
-        return jdbcTemplate.query("SELECT * FROM artezio_project.academic_groups", new GroupMapper());
+        return jdbcTemplate.query("SELECT * FROM artezio_project.academic_groups ORDER BY faculty, name_group", new GroupMapper());
     }
 
     public AcademicGroup showGroup(int id){

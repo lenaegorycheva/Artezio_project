@@ -18,44 +18,44 @@
 </head>
 <body>
 <div id="info">
-<h3>Карточка студента</h3>
-<div>
-    <div class="row">
-        <small class="text-muted">ФИО:</small>
-        <div class="col">
-            <p th:text="${student.getSurname()} + ' ' + ${student.getName()} + ' ' + ${student.getPatronymic()}">value</p>
+    <h3>Карточка студента</h3>
+    <div>
+        <div class="row">
+            <small class="text-muted">ФИО:</small>
+            <div class="col">
+                <p th:text="${student.getSurname()} + ' ' + ${student.getName()} + ' ' + ${student.getPatronymic()}">value</p>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <small class="text-muted">Возраст:</small>
-        <div class="col">
-            <p th:text="${student.getAge()}">value</p>
+        <div class="row">
+            <small class="text-muted">Возраст:</small>
+            <div class="col">
+                <p th:text="${student.getAge()}">value</p>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <small class="text-muted">Группа:</small>
-        <div class="col">
-            <p th:text="${student.getNameGroup()}">value</p>
+        <div class="row">
+            <small class="text-muted">Группа:</small>
+            <div class="col">
+                <p th:text="${student.getNameGroup()}">value</p>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <small class="text-muted">Телефон:</small>
-        <div class="col">
-            <p th:text="${student.getPhone()}">value</p>
+        <div class="row">
+            <small class="text-muted">Телефон:</small>
+            <div class="col">
+                <p th:text="${student.getPhone()}">value</p>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <small class="text-muted">Email:</small>
-        <div class="col">
-            <p th:text="${student.getEmail()}">value</p>
+        <div class="row">
+            <small class="text-muted">Email:</small>
+            <div class="col">
+                <p th:text="${student.getEmail()}">value</p>
+            </div>
         </div>
-    </div>
 
-    <a id="edit" type="button" th:href="@{/students/{id}/editStudent(id=${student.getId()})}">Редактировать карточку</a>
-    <form th:method="DELETE" th:action="@{/students/{id}(id=${student.getId()})}">
-        <input class="btn btn-outline-primary" type="submit"  value="Удалить карточку"/>
-    </form>
-</div>
+        <a id="edit" type="button" th:href="@{/students/{id}/editStudent(id=${student.getId()})}">Редактировать карточку</a>
+        <form th:method="DELETE" th:action="@{/students/{id}(id=${student.getId()})}">
+            <input class="btn btn-outline-primary" type="submit"  value="Удалить карточку"/>
+        </form>
+    </div>
 </div>
 </body>
 </html>

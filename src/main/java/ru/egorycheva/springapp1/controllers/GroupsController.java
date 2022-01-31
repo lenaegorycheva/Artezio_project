@@ -6,8 +6,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ru.egorycheva.springapp1.dao.GroupDAO;
 import ru.egorycheva.springapp1.models.AcademicGroup;
-import ru.egorycheva.springapp1.models.Student;
-
 import javax.validation.Valid;
 
 @Controller
@@ -27,6 +25,9 @@ public class GroupsController {
 
     @GetMapping("/{id}")
     public String showGroup(@PathVariable("id") int id, Model model){
+        if(groupDAO.showGroup(id) == null){
+            return "groups/noGroup";
+        }
         model.addAttribute("group", groupDAO.showGroup(id));
         return "groups/showGroup";
     }
@@ -48,6 +49,9 @@ public class GroupsController {
 
     @GetMapping("/{id}/editGroup")
     public String editGroups(@PathVariable("id") int id, Model model){
+        if(groupDAO.showGroup(id) == null){
+            return "groups/noGroup";
+        }
         model.addAttribute("group", groupDAO.showGroup(id));
         return "/groups/editGroup";
     }

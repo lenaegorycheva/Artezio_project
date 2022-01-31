@@ -25,6 +25,9 @@ public class StudentsController {
 
     @GetMapping("/{id}")
     public String showStudent(@PathVariable("id") int id, Model model){
+        if(studentDAO.showStudent(id) == null){
+            return "students/noStudent";
+        }
         model.addAttribute("student", studentDAO.showStudent(id));
         return "students/showStudent";
     }
@@ -48,6 +51,9 @@ public class StudentsController {
 
     @GetMapping("/{id}/editStudent")
     public String editStudents(@PathVariable("id") int id, Model model){
+        if(studentDAO.showStudent(id) == null){
+            return "students/noStudent";
+        }
         model.addAttribute("groups", studentDAO.getGroups());
         model.addAttribute("student", studentDAO.showStudent(id));
         return "/students/editStudent";

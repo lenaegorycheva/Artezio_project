@@ -41,7 +41,7 @@
     </div>
 
     <div class="row">
-        <small class="text-muted">Количество лет</small><br>
+        <small class="text-muted">Длительность обучения</small><br>
         <div class="col">
             <input type="number" class="form-control" th:field="*{qtYear}" id="qtYear"/>
             <div class="form-text" style="color:red" th:if="${#fields.hasErrors('qtYear')}" th:errors="*{qtYear}">error</div>
